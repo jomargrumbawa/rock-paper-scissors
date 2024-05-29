@@ -1,6 +1,8 @@
 const rockBtn = document.getElementById("rock-btn")
 const paperBtn = document.getElementById("paper-btn")
 const scissorsBtn = document.getElementById("scissors-btn")
+const humanScoreEl = document.getElementById("human-score")
+const computerScoreEl = document.getElementById("computer-score")
 const choices = ["rock", "paper", "scissors"]
 let humanScore = 0
 let computerScore = 0
@@ -40,10 +42,9 @@ function playRound(humanChoice, computerChoice) {
   } else if (humanChoice === 'paper' && computerChoice === 'scissors') {
     computerScore++
   }
-  console.log("human choice: ", humanChoice)
-  console.log("human score: ", humanScore)
-  console.log("computer choice: ", computerChoice)
-  console.log("computer score: ", computerScore)
+  humanScoreEl.textContent = humanScore
+  computerScoreEl.textContent = computerScore
 }
+
 
 
