@@ -44,7 +44,14 @@ function playRound(humanChoice, computerChoice) {
   }
   humanScoreEl.textContent = humanScore
   computerScoreEl.textContent = computerScore
+
+  checkScore()
 }
 
-
-
+function checkScore() {
+  if (humanScore === 5) {
+    alert('You win the game!')
+  } else if (computerScore === 5) {
+    alert('You lose the game, computer wins!')
+  }
+}
